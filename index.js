@@ -13,7 +13,7 @@ function findMatching(drivers, name) {
 function fuzzyMatch(drivers, letters) {
     
    
-    let driver = (drivers.filter(driverName => driverName.substring(0,letters.length) === letters
+    let driver = (drivers.filter(name => name.substring(0,letters.length) === letters
     ));
     
     return driver;
