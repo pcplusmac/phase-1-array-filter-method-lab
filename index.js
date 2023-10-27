@@ -1,7 +1,6 @@
-// Code your solution here
-// const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
 
-// Define function 
+
+
 function findMatching(drivers, name) {
     
     let newDrivers= drivers.filter(driverName => driverName.toUpperCase() === name.toUpperCase());
@@ -10,26 +9,18 @@ function findMatching(drivers, name) {
     return newDrivers; 
 }
 
-// Define function to find the drivers with specific names
-function fuzzyMatch(drivers, letter) {
+
+function fuzzyMatch(drivers, letters) {
     
-    // let driverNew = []
-    let driver = (drivers.filter(driverName => driverName.substring(0,1) === letter
+   
+    let driver = (drivers.filter(driverName => driverName.substring(0,letters.length) === letters
     ));
-    // if (driver) {
-    //     driverNew = Object.assign({},driver)
-    // }
+    
     return driver;
-    // if (driver) {
-    //     newDrivers.push(driver);
-    //     return driverName;
-    // }
-     
+   
 }
 
-function matchName (arr, str) {
-    let op = arr.filter (driver => driver.name === str)
-    for (let dr of op) {
-        return dr
-    }
+function matchName (drivers, name) {
+    let matchingDrivers = drivers.filter (driver => driver.name === name)
+    return matchingDrivers
 }
